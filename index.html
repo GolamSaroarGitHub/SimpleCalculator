@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Calculator</title>
+  <style media="screen">
+    #result{
+
+      width: 230px;
+      margin-left: 5px;
+    }
+    .btn{
+      width: 50px;
+      height: 25px;
+      text-align: center;
+      color: green;
+      margin: 5px;
+    }
+     #equal {
+      width: 115px;
+      margin-left: 5px;
+    }
+    #cBtn{
+      width: 115px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="" name="calculator">
+  <input type="text" name="result" value="" id="result">
+  <br>
+<br>
+<input type="button" name="1" value="1" class="btn" onclick="run1()">
+<input type="button" name="2" value="2" class="btn" onclick="run2()">
+<input type="button" name="3" value="3" class="btn" onclick="run3()">
+<input type="button" name="+" value="+" class="btn" onclick="runPlus()">
+<br>
+<input type="button" name="4" value="4" class="btn" onclick="run4()">
+<input type="button" name="5" value="5" class="btn" onclick="run5()">
+<input type="button" name="6" value="6" class="btn" onclick="run6()">
+<input type="button" name="-" value="-" class="btn" onclick="runMinus()">
+<br>
+<input type="button" name="7" value="7" class="btn" onclick="run7()">
+<input type="button" name="8" value="8" class="btn" onclick="run8()">
+<input type="button" name="9" value="9" class="btn" onclick="run9()">
+<input type="button" name="/" value="/" class="btn" onclick="runDivide()">
+<br>
+<input type="button" name="0" value="0" class="btn" onclick="run0()">
+<input type="button" name="dot" value="." class="btn" onclick="runDot()">
+<input type="button" name="percent" value="%" class="btn" onclick="runPercent()">
+<input type="button" name="multiply" value="*" class="btn" onclick="runMultiply()">
+<br>
+<input type="button" name="cBtn" value="C" id="cBtn" onclick="runC()">
+<input type="button" name="equal" value="=" id="equal" onclick="Evaluate()">
+
+<script type="text/javascript">
+
+function run1(){
+  document.calculator.result.value+="1";
+}
+
+function run2(){
+  document.calculator.result.value+="2";
+}
+function run3(){
+  document.calculator.result.value+="3";
+}
+function runPlus()
+{
+  var str=document.calculator.result.value.slice(-1);
+    if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+
+    document.calculator.result.value+="+";
+
+
+}
+
+function run4(){
+  document.calculator.result.value+="4";
+}
+
+function run5(){
+  document.calculator.result.value+="5";
+}
+function run6(){
+  document.calculator.result.value+="6";
+}
+function runMinus(){
+  var str=document.calculator.result.value.slice(-1);
+    if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+  document.calculator.result.value+="-";
+}
+function run7(){
+  document.calculator.result.value+="7";
+}
+
+function run8(){
+  document.calculator.result.value+="8";
+}
+function run9(){
+  document.calculator.result.value+="9";
+}
+function runDivide(){
+  var str=document.calculator.result.value.slice(-1);
+    if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+  document.calculator.result.value+="/";
+}
+function runMultiply(){
+  var str=document.calculator.result.value.slice(-1);
+    if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+  document.calculator.result.value+="*";
+}
+
+function run0(){
+  document.calculator.result.value+="0";
+}
+function runDot(){
+  var str=document.calculator.result.value.slice(-1);
+    if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+  document.calculator.result.value+=".";
+
+}
+
+function runPercent(){
+  var str=document.calculator.result.value.slice(-1);
+    if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+  document.calculator.result.value+="%";
+}
+function runC(){
+  document.calculator.result.value="";
+}
+function Evaluate()
+{
+  //if(str!=='+'  || str!=='-'  || str!=='/'  || str!=='*'  || str!=='%'  || str!=='.')
+
+var str=document.calculator.result.value.slice(-1);
+  if(str!=='+' && str!=='-' && str!=='/' && str!=='*' && str!=='%' && str!=='.')
+{
+  var res=eval(document.calculator.result.value)
+  document.calculator.result.value=res;
+}
+
+}
+
+
+
+</script>
+
+
+  </form>
+</body>
+</html>
